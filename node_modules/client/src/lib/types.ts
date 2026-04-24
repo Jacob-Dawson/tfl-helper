@@ -1,5 +1,3 @@
-import type { NumberValue } from "d3";
-
 export interface Station {
     id: string; // NaPTAN code
     name: string;
