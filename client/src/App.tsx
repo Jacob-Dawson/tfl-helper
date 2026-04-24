@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import MeetingPoint from "./pages/MeetingPoint";
+import MeetingPoint from "./pages/MeetingPoint.tsx";
 
 export default function App(){
 
