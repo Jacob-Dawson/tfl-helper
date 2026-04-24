@@ -1,0 +1,12 @@
+{
+  "name": "tfl-platform",
+  "private": true,
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "dataset": "ts-node scripts/buildDataset.ts"
+  }
+}
