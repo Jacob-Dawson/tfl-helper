@@ -434,7 +434,7 @@ async function build(): Promise<void> {
   const stations = Array.from(stationsMap.values());
   const connections = Array.from(connectionsMap.values());
 
-  const outDir = path.resolve("src/data");
+  const outDir = path.resolve("client/src/data");
   await fs.mkdir(outDir, { recursive: true });
 
   await fs.writeFile(
