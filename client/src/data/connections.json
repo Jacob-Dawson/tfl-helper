@@ -288,6 +288,102 @@
     "travelTime": 3
   },
   {
+    "from": "940GZZLUEPG",
+    "to": "940GZZLUTHB",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUTHB",
+    "to": "940GZZLUEPG",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUTHB",
+    "to": "940GZZLUDBN",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUDBN",
+    "to": "940GZZLUTHB",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUDBN",
+    "to": "940GZZLULGN",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULGN",
+    "to": "940GZZLUDBN",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULGN",
+    "to": "940GZZLUBKH",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUBKH",
+    "to": "940GZZLULGN",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUBKH",
+    "to": "940GZZLUWOF",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWOF",
+    "to": "940GZZLUBKH",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWOF",
+    "to": "940GZZLUSWF",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSWF",
+    "to": "940GZZLUWOF",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSWF",
+    "to": "940GZZLUSNB",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSNB",
+    "to": "940GZZLUSWF",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSNB",
+    "to": "940GZZLULYS",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULYS",
+    "to": "940GZZLUSNB",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
     "from": "940GZZLULYS",
     "to": "940GZZLULYN",
     "line": "central",
@@ -540,6 +636,246 @@
     "travelTime": 2
   },
   {
+    "from": "940GZZLUNAN",
+    "to": "940GZZLUHGR",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHGR",
+    "to": "940GZZLUNAN",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHGR",
+    "to": "940GZZLUPVL",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUPVL",
+    "to": "940GZZLUHGR",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUPVL",
+    "to": "940GZZLUGFD",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUGFD",
+    "to": "940GZZLUPVL",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUGFD",
+    "to": "940GZZLUNHT",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNHT",
+    "to": "940GZZLUGFD",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNHT",
+    "to": "940GZZLUSRP",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUSRP",
+    "to": "940GZZLUNHT",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUSRP",
+    "to": "940GZZLURSG",
+    "line": "central",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLURSG",
+    "to": "940GZZLUSRP",
+    "line": "central",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLURSG",
+    "to": "940GZZLUWRP",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWRP",
+    "to": "940GZZLURSG",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHLT",
+    "to": "940GZZLUFLP",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUFLP",
+    "to": "940GZZLUHLT",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUFLP",
+    "to": "940GZZLUBKE",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBKE",
+    "to": "940GZZLUFLP",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBKE",
+    "to": "940GZZLUNBP",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNBP",
+    "to": "940GZZLUBKE",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNBP",
+    "to": "940GZZLUGTH",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGTH",
+    "to": "940GZZLUNBP",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGTH",
+    "to": "940GZZLURBG",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURBG",
+    "to": "940GZZLUGTH",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURBG",
+    "to": "940GZZLUWSD",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWSD",
+    "to": "940GZZLURBG",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWSD",
+    "to": "940GZZLULYS",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULYS",
+    "to": "940GZZLUWSD",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHLT",
+    "to": "940GZZLUGGH",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGGH",
+    "to": "940GZZLUHLT",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGGH",
+    "to": "940GZZLUCWL",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCWL",
+    "to": "940GZZLUGGH",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCWL",
+    "to": "940GZZLURVY",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURVY",
+    "to": "940GZZLUCWL",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURVY",
+    "to": "940GZZLUWOF",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWOF",
+    "to": "940GZZLURVY",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUNAN",
+    "to": "940GZZLUWTA",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWTA",
+    "to": "940GZZLUNAN",
+    "line": "central",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWTA",
+    "to": "940GZZLUEBY",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUEBY",
+    "to": "940GZZLUWTA",
+    "line": "central",
+    "travelTime": 3
+  },
+  {
     "from": "940GZZLUERC",
     "to": "940GZZLUPAC",
     "line": "circle",
@@ -862,6 +1198,114 @@
     "to": "940GZZLUBST",
     "line": "circle",
     "travelTime": 3
+  },
+  {
+    "from": "940GZZLUERC",
+    "to": "940GZZLUPAH",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUPAH",
+    "to": "940GZZLUERC",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUPAH",
+    "to": "940GZZLURYO",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLURYO",
+    "to": "940GZZLUPAH",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLURYO",
+    "to": "940GZZLUWSP",
+    "line": "circle",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWSP",
+    "to": "940GZZLURYO",
+    "line": "circle",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWSP",
+    "to": "940GZZLULAD",
+    "line": "circle",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULAD",
+    "to": "940GZZLUWSP",
+    "line": "circle",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULAD",
+    "to": "940GZZLULRD",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLULRD",
+    "to": "940GZZLULAD",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLULRD",
+    "to": "940GZZLUWLA",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWLA",
+    "to": "940GZZLULRD",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWLA",
+    "to": "940GZZLUSBM",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUSBM",
+    "to": "940GZZLUWLA",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUSBM",
+    "to": "940GZZLUGHK",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUGHK",
+    "to": "940GZZLUSBM",
+    "line": "circle",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUGHK",
+    "to": "940GZZLUHSC",
+    "line": "circle",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHSC",
+    "to": "940GZZLUGHK",
+    "line": "circle",
+    "travelTime": 2
   },
   {
     "from": "940GZZLUUPM",
@@ -1248,6 +1692,498 @@
     "travelTime": 2
   },
   {
+    "from": "940GZZLUECT",
+    "to": "940GZZLUWKN",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWKN",
+    "to": "940GZZLUECT",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWKN",
+    "to": "940GZZLUBSC",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBSC",
+    "to": "940GZZLUWKN",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBSC",
+    "to": "940GZZLUHSD",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUHSD",
+    "to": "940GZZLUBSC",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUHSD",
+    "to": "940GZZLURVP",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURVP",
+    "to": "940GZZLUHSD",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURVP",
+    "to": "940GZZLUSFB",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSFB",
+    "to": "940GZZLURVP",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSFB",
+    "to": "940GZZLUTNG",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUTNG",
+    "to": "940GZZLUSFB",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUTNG",
+    "to": "940GZZLUCWP",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCWP",
+    "to": "940GZZLUTNG",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCWP",
+    "to": "940GZZLUACT",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUACT",
+    "to": "940GZZLUCWP",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUACT",
+    "to": "940GZZLUECM",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUECM",
+    "to": "940GZZLUACT",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUECM",
+    "to": "940GZZLUEBY",
+    "line": "district",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUEBY",
+    "to": "940GZZLUECM",
+    "line": "district",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUTNG",
+    "to": "940GZZLUGBY",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGBY",
+    "to": "940GZZLUTNG",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGBY",
+    "to": "940GZZLUKWG",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUKWG",
+    "to": "940GZZLUGBY",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUKWG",
+    "to": "940GZZLURMD",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLURMD",
+    "to": "940GZZLUKWG",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUECT",
+    "to": "940GZZLUWBN",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWBN",
+    "to": "940GZZLUECT",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWBN",
+    "to": "940GZZLUFBY",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUFBY",
+    "to": "940GZZLUWBN",
+    "line": "district",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUFBY",
+    "to": "940GZZLUPSG",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUPSG",
+    "to": "940GZZLUFBY",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUPSG",
+    "to": "940GZZLUPYB",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUPYB",
+    "to": "940GZZLUPSG",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUPYB",
+    "to": "940GZZLUEPY",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEPY",
+    "to": "940GZZLUPYB",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEPY",
+    "to": "940GZZLUSFS",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSFS",
+    "to": "940GZZLUEPY",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSFS",
+    "to": "940GZZLUWIP",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWIP",
+    "to": "940GZZLUSFS",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWIP",
+    "to": "940GZZLUWIM",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWIM",
+    "to": "940GZZLUWIP",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUERC",
+    "to": "940GZZLUPAC",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUPAC",
+    "to": "940GZZLUERC",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUPAC",
+    "to": "940GZZLUBWT",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBWT",
+    "to": "940GZZLUPAC",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBWT",
+    "to": "940GZZLUNHG",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNHG",
+    "to": "940GZZLUBWT",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNHG",
+    "to": "940GZZLUHSK",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHSK",
+    "to": "940GZZLUNHG",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHSK",
+    "to": "940GZZLUECT",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUECT",
+    "to": "940GZZLUHSK",
+    "line": "district",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUECT",
+    "to": "940GZZLUKOY",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUKOY",
+    "to": "940GZZLUECT",
+    "line": "district",
+    "travelTime": 2
+  },
+  {
+    "from": "910GHTRWTM4",
+    "to": "910GHTRWAPT",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GHTRWAPT",
+    "to": "910GHTRWTM4",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GHTRWAPT",
+    "to": "910GHAYESAH",
+    "line": "elizabeth",
+    "travelTime": 8
+  },
+  {
+    "from": "910GHAYESAH",
+    "to": "910GHTRWAPT",
+    "line": "elizabeth",
+    "travelTime": 8
+  },
+  {
+    "from": "910GHAYESAH",
+    "to": "910GSTHALL",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GSTHALL",
+    "to": "910GHAYESAH",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GSTHALL",
+    "to": "910GHANWELL",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GHANWELL",
+    "to": "910GSTHALL",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GHANWELL",
+    "to": "910GWEALING",
+    "line": "elizabeth",
+    "travelTime": 2
+  },
+  {
+    "from": "910GWEALING",
+    "to": "910GHANWELL",
+    "line": "elizabeth",
+    "travelTime": 2
+  },
+  {
+    "from": "910GWEALING",
+    "to": "910GEALINGB",
+    "line": "elizabeth",
+    "travelTime": 2
+  },
+  {
+    "from": "910GEALINGB",
+    "to": "910GWEALING",
+    "line": "elizabeth",
+    "travelTime": 2
+  },
+  {
+    "from": "910GEALINGB",
+    "to": "910GACTONML",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GACTONML",
+    "to": "910GEALINGB",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GACTONML",
+    "to": "910GPADTLL",
+    "line": "elizabeth",
+    "travelTime": 11
+  },
+  {
+    "from": "910GPADTLL",
+    "to": "910GACTONML",
+    "line": "elizabeth",
+    "travelTime": 11
+  },
+  {
+    "from": "910GPADTLL",
+    "to": "910GBONDST",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GBONDST",
+    "to": "910GPADTLL",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GBONDST",
+    "to": "910GTOTCTRD",
+    "line": "elizabeth",
+    "travelTime": 2
+  },
+  {
+    "from": "910GTOTCTRD",
+    "to": "910GBONDST",
+    "line": "elizabeth",
+    "travelTime": 2
+  },
+  {
+    "from": "910GTOTCTRD",
+    "to": "910GFRNDXR",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GFRNDXR",
+    "to": "910GTOTCTRD",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GFRNDXR",
+    "to": "910GLIVSTLL",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GLIVSTLL",
+    "to": "910GFRNDXR",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GLIVSTLL",
+    "to": "910GWCHAPXR",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GWCHAPXR",
+    "to": "910GLIVSTLL",
+    "line": "elizabeth",
+    "travelTime": 3
+  },
+  {
+    "from": "910GWCHAPXR",
+    "to": "910GSTFD",
+    "line": "elizabeth",
+    "travelTime": 8
+  },
+  {
+    "from": "910GSTFD",
+    "to": "910GWCHAPXR",
+    "line": "elizabeth",
+    "travelTime": 8
+  },
+  {
     "from": "910GSTFD",
     "to": "910GMRYLAND",
     "line": "elizabeth",
@@ -1390,6 +2326,198 @@
     "to": "910GBRTWOOD",
     "line": "elizabeth",
     "travelTime": 5
+  },
+  {
+    "from": "910GHTRWTM5",
+    "to": "910GHTRWAPT",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GHTRWAPT",
+    "to": "910GHTRWTM5",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GWCHAPXR",
+    "to": "910GCANWHRF",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GCANWHRF",
+    "to": "910GWCHAPXR",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GCANWHRF",
+    "to": "910GCUSTMHS",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GCUSTMHS",
+    "to": "910GCANWHRF",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GCUSTMHS",
+    "to": "910GWOLWXR",
+    "line": "elizabeth",
+    "travelTime": 7
+  },
+  {
+    "from": "910GWOLWXR",
+    "to": "910GCUSTMHS",
+    "line": "elizabeth",
+    "travelTime": 7
+  },
+  {
+    "from": "910GWOLWXR",
+    "to": "910GABWDXR",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GABWDXR",
+    "to": "910GWOLWXR",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GRDNGSTN",
+    "to": "910GTWYFORD",
+    "line": "elizabeth",
+    "travelTime": 14
+  },
+  {
+    "from": "910GTWYFORD",
+    "to": "910GRDNGSTN",
+    "line": "elizabeth",
+    "travelTime": 14
+  },
+  {
+    "from": "910GTWYFORD",
+    "to": "910GMDNHEAD",
+    "line": "elizabeth",
+    "travelTime": 20
+  },
+  {
+    "from": "910GMDNHEAD",
+    "to": "910GTWYFORD",
+    "line": "elizabeth",
+    "travelTime": 20
+  },
+  {
+    "from": "910GMDNHEAD",
+    "to": "910GTAPLOW",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GTAPLOW",
+    "to": "910GMDNHEAD",
+    "line": "elizabeth",
+    "travelTime": 5
+  },
+  {
+    "from": "910GTAPLOW",
+    "to": "910GBNHAM",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GBNHAM",
+    "to": "910GTAPLOW",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GBNHAM",
+    "to": "910GSLOUGH",
+    "line": "elizabeth",
+    "travelTime": 7
+  },
+  {
+    "from": "910GSLOUGH",
+    "to": "910GBNHAM",
+    "line": "elizabeth",
+    "travelTime": 7
+  },
+  {
+    "from": "910GSLOUGH",
+    "to": "910GLANGLEY",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GLANGLEY",
+    "to": "910GSLOUGH",
+    "line": "elizabeth",
+    "travelTime": 6
+  },
+  {
+    "from": "910GLANGLEY",
+    "to": "910GIVER",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GIVER",
+    "to": "910GLANGLEY",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GIVER",
+    "to": "910GWDRYTON",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GWDRYTON",
+    "to": "910GIVER",
+    "line": "elizabeth",
+    "travelTime": 4
+  },
+  {
+    "from": "910GWDRYTON",
+    "to": "910GHAYESAH",
+    "line": "elizabeth",
+    "travelTime": 7
+  },
+  {
+    "from": "910GHAYESAH",
+    "to": "910GWDRYTON",
+    "line": "elizabeth",
+    "travelTime": 7
+  },
+  {
+    "from": "910GACTONML",
+    "to": "910GPADTON",
+    "line": "elizabeth",
+    "travelTime": 11
+  },
+  {
+    "from": "910GPADTON",
+    "to": "910GACTONML",
+    "line": "elizabeth",
+    "travelTime": 11
+  },
+  {
+    "from": "910GLIVST",
+    "to": "910GSTFD",
+    "line": "elizabeth",
+    "travelTime": 11
+  },
+  {
+    "from": "910GSTFD",
+    "to": "910GLIVST",
+    "line": "elizabeth",
+    "travelTime": 11
   },
   {
     "from": "940GZZLUBKG",
@@ -2436,6 +3564,306 @@
     "travelTime": 2
   },
   {
+    "from": "940GZZLUHOH",
+    "to": "940GZZLUNHA",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUNHA",
+    "to": "940GZZLUHOH",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUNHA",
+    "to": "940GZZLUPNR",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUPNR",
+    "to": "940GZZLUNHA",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUPNR",
+    "to": "940GZZLUNWH",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNWH",
+    "to": "940GZZLUPNR",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNWH",
+    "to": "940GZZLUNOW",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNOW",
+    "to": "940GZZLUNWH",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUNOW",
+    "to": "940GZZLUMPK",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUMPK",
+    "to": "940GZZLUNOW",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUMPK",
+    "to": "940GZZLURKW",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLURKW",
+    "to": "940GZZLUMPK",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLURKW",
+    "to": "940GZZLUCYD",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCYD",
+    "to": "940GZZLURKW",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCYD",
+    "to": "940GZZLUCAL",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCAL",
+    "to": "940GZZLUCYD",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCAL",
+    "to": "940GZZLUCSM",
+    "line": "metropolitan",
+    "travelTime": 8
+  },
+  {
+    "from": "940GZZLUCSM",
+    "to": "940GZZLUCAL",
+    "line": "metropolitan",
+    "travelTime": 8
+  },
+  {
+    "from": "940GZZLUCAL",
+    "to": "940GZZLUAMS",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUAMS",
+    "to": "940GZZLUCAL",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHOH",
+    "to": "940GZZLUWHW",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWHW",
+    "to": "940GZZLUHOH",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWHW",
+    "to": "940GZZLURYL",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLURYL",
+    "to": "940GZZLUWHW",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLURYL",
+    "to": "940GZZLUEAE",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEAE",
+    "to": "940GZZLURYL",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEAE",
+    "to": "940GZZLURSM",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSM",
+    "to": "940GZZLUEAE",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSM",
+    "to": "940GZZLURSP",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSP",
+    "to": "940GZZLURSM",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSP",
+    "to": "940GZZLUICK",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUICK",
+    "to": "940GZZLURSP",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUICK",
+    "to": "940GZZLUHGD",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHGD",
+    "to": "940GZZLUICK",
+    "line": "metropolitan",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHGD",
+    "to": "940GZZLUUXB",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUUXB",
+    "to": "940GZZLUHGD",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUMPK",
+    "to": "940GZZLUCXY",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCXY",
+    "to": "940GZZLUMPK",
+    "line": "metropolitan",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCXY",
+    "to": "940GZZLUWAF",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWAF",
+    "to": "940GZZLUCXY",
+    "line": "metropolitan",
+    "travelTime": 3
+  },
+  {
+    "from": "910GRICHMND",
+    "to": "910GKEWGRDN",
+    "line": "mildmay",
+    "travelTime": 4
+  },
+  {
+    "from": "910GKEWGRDN",
+    "to": "910GRICHMND",
+    "line": "mildmay",
+    "travelTime": 4
+  },
+  {
+    "from": "910GKEWGRDN",
+    "to": "910GGNRSBRY",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GGNRSBRY",
+    "to": "910GKEWGRDN",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GGNRSBRY",
+    "to": "910GSACTON",
+    "line": "mildmay",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSACTON",
+    "to": "910GGNRSBRY",
+    "line": "mildmay",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSACTON",
+    "to": "910GACTNCTL",
+    "line": "mildmay",
+    "travelTime": 2
+  },
+  {
+    "from": "910GACTNCTL",
+    "to": "910GSACTON",
+    "line": "mildmay",
+    "travelTime": 2
+  },
+  {
+    "from": "910GACTNCTL",
+    "to": "910GWLSDJHL",
+    "line": "mildmay",
+    "travelTime": 5
+  },
+  {
+    "from": "910GWLSDJHL",
+    "to": "910GACTNCTL",
+    "line": "mildmay",
+    "travelTime": 5
+  },
+  {
     "from": "910GWLSDJHL",
     "to": "910GKENR",
     "line": "mildmay",
@@ -2640,6 +4068,306 @@
     "travelTime": 3
   },
   {
+    "from": "910GCLPHMJ1",
+    "to": "910GCSEAH",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GCSEAH",
+    "to": "910GCLPHMJ1",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GCSEAH",
+    "to": "910GWBRMPTN",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GWBRMPTN",
+    "to": "910GCSEAH",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GWBRMPTN",
+    "to": "910GKENOLYM",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GKENOLYM",
+    "to": "910GWBRMPTN",
+    "line": "mildmay",
+    "travelTime": 3
+  },
+  {
+    "from": "910GKENOLYM",
+    "to": "910GSHPDSB",
+    "line": "mildmay",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSHPDSB",
+    "to": "910GKENOLYM",
+    "line": "mildmay",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSHPDSB",
+    "to": "910GWLSDJHL",
+    "line": "mildmay",
+    "travelTime": 6
+  },
+  {
+    "from": "910GWLSDJHL",
+    "to": "910GSHPDSB",
+    "line": "mildmay",
+    "travelTime": 6
+  },
+  {
+    "from": "940GZZLUHBT",
+    "to": "940GZZLUTAW",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUTAW",
+    "to": "940GZZLUHBT",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUTAW",
+    "to": "940GZZLUWOP",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWOP",
+    "to": "940GZZLUTAW",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUWOP",
+    "to": "940GZZLUWFN",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWFN",
+    "to": "940GZZLUWOP",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWFN",
+    "to": "940GZZLUFYC",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUFYC",
+    "to": "940GZZLUWFN",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUFYC",
+    "to": "940GZZLUEFY",
+    "line": "northern",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUEFY",
+    "to": "940GZZLUFYC",
+    "line": "northern",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUEFY",
+    "to": "940GZZLUHGT",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHGT",
+    "to": "940GZZLUEFY",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHGT",
+    "to": "940GZZLUACY",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUACY",
+    "to": "940GZZLUHGT",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUACY",
+    "to": "940GZZLUTFP",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUTFP",
+    "to": "940GZZLUACY",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUTFP",
+    "to": "940GZZLUKSH",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUKSH",
+    "to": "940GZZLUTFP",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUKSH",
+    "to": "940GZZLUCTN",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCTN",
+    "to": "940GZZLUKSH",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCTN",
+    "to": "940GZZLUMTC",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUMTC",
+    "to": "940GZZLUCTN",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUMTC",
+    "to": "940GZZLUEUS",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEUS",
+    "to": "940GZZLUMTC",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEUS",
+    "to": "940GZZLUWRR",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWRR",
+    "to": "940GZZLUEUS",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUWRR",
+    "to": "940GZZLUGDG",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUGDG",
+    "to": "940GZZLUWRR",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUGDG",
+    "to": "940GZZLUTCR",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUTCR",
+    "to": "940GZZLUGDG",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUTCR",
+    "to": "940GZZLULSQ",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLULSQ",
+    "to": "940GZZLUTCR",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLULSQ",
+    "to": "940GZZLUCHX",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCHX",
+    "to": "940GZZLULSQ",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCHX",
+    "to": "940GZZLUEMB",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUEMB",
+    "to": "940GZZLUCHX",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUEMB",
+    "to": "940GZZLUWLO",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWLO",
+    "to": "940GZZLUEMB",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUWLO",
+    "to": "940GZZLUKNG",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUKNG",
+    "to": "940GZZLUWLO",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
     "from": "940GZZLUKNG",
     "to": "940GZZLUOVL",
     "line": "northern",
@@ -2770,6 +4498,270 @@
     "to": "940GZZLUSWN",
     "line": "northern",
     "travelTime": 4
+  },
+  {
+    "from": "940GZZLUCTN",
+    "to": "940GZZLUEUS",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUEUS",
+    "to": "940GZZLUCTN",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUEUS",
+    "to": "940GZZLUKSX",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUKSX",
+    "to": "940GZZLUEUS",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUKSX",
+    "to": "940GZZLUAGL",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUAGL",
+    "to": "940GZZLUKSX",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUAGL",
+    "to": "940GZZLUODS",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUODS",
+    "to": "940GZZLUAGL",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUODS",
+    "to": "940GZZLUMGT",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUMGT",
+    "to": "940GZZLUODS",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUMGT",
+    "to": "940GZZLUBNK",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUBNK",
+    "to": "940GZZLUMGT",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUBNK",
+    "to": "940GZZLULNB",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULNB",
+    "to": "940GZZLUBNK",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLULNB",
+    "to": "940GZZLUBOR",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBOR",
+    "to": "940GZZLULNB",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBOR",
+    "to": "940GZZLUEAC",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUEAC",
+    "to": "940GZZLUBOR",
+    "line": "northern",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUEAC",
+    "to": "940GZZLUKNG",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUKNG",
+    "to": "940GZZLUEAC",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEGW",
+    "to": "940GZZLUBTK",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUBTK",
+    "to": "940GZZLUEGW",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUBTK",
+    "to": "940GZZLUCND",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCND",
+    "to": "940GZZLUBTK",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCND",
+    "to": "940GZZLUHCL",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHCL",
+    "to": "940GZZLUCND",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHCL",
+    "to": "940GZZLUBTX",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBTX",
+    "to": "940GZZLUHCL",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBTX",
+    "to": "940GZZLUGGN",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGGN",
+    "to": "940GZZLUBTX",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUGGN",
+    "to": "940GZZLUHTD",
+    "line": "northern",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHTD",
+    "to": "940GZZLUGGN",
+    "line": "northern",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHTD",
+    "to": "940GZZLUBZP",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBZP",
+    "to": "940GZZLUHTD",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBZP",
+    "to": "940GZZLUCFM",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCFM",
+    "to": "940GZZLUBZP",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCFM",
+    "to": "940GZZLUCTN",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUCTN",
+    "to": "940GZZLUCFM",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUMHL",
+    "to": "940GZZLUFYC",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUFYC",
+    "to": "940GZZLUMHL",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUKNG",
+    "to": "940GZZNEUGST",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZNEUGST",
+    "to": "940GZZLUKNG",
+    "line": "northern",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZNEUGST",
+    "to": "940GZZBPSUST",
+    "line": "northern",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZBPSUST",
+    "to": "940GZZNEUGST",
+    "line": "northern",
+    "travelTime": 2
   },
   {
     "from": "940GZZLUCKS",
@@ -3092,6 +5084,306 @@
   {
     "from": "940GZZLUACT",
     "to": "940GZZLUTNG",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUACT",
+    "to": "940GZZLUECM",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUECM",
+    "to": "940GZZLUACT",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUECM",
+    "to": "940GZZLUNEN",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUNEN",
+    "to": "940GZZLUECM",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUNEN",
+    "to": "940GZZLUPKR",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUPKR",
+    "to": "940GZZLUNEN",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUPKR",
+    "to": "940GZZLUALP",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUALP",
+    "to": "940GZZLUPKR",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUALP",
+    "to": "940GZZLUSUT",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSUT",
+    "to": "940GZZLUALP",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSUT",
+    "to": "940GZZLUSUH",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUSUH",
+    "to": "940GZZLUSUT",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUSUH",
+    "to": "940GZZLUSHH",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSHH",
+    "to": "940GZZLUSUH",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUSHH",
+    "to": "940GZZLURYL",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLURYL",
+    "to": "940GZZLUSHH",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLURYL",
+    "to": "940GZZLUEAE",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEAE",
+    "to": "940GZZLURYL",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUEAE",
+    "to": "940GZZLURSM",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSM",
+    "to": "940GZZLUEAE",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSM",
+    "to": "940GZZLURSP",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSP",
+    "to": "940GZZLURSM",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLURSP",
+    "to": "940GZZLUICK",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUICK",
+    "to": "940GZZLURSP",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUICK",
+    "to": "940GZZLUHGD",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHGD",
+    "to": "940GZZLUICK",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHGD",
+    "to": "940GZZLUUXB",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUUXB",
+    "to": "940GZZLUHGD",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUACT",
+    "to": "940GZZLUSEA",
+    "line": "piccadilly",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUSEA",
+    "to": "940GZZLUACT",
+    "line": "piccadilly",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUSEA",
+    "to": "940GZZLUNFD",
+    "line": "piccadilly",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUNFD",
+    "to": "940GZZLUSEA",
+    "line": "piccadilly",
+    "travelTime": 1
+  },
+  {
+    "from": "940GZZLUNFD",
+    "to": "940GZZLUBOS",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBOS",
+    "to": "940GZZLUNFD",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUBOS",
+    "to": "940GZZLUOSY",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUOSY",
+    "to": "940GZZLUBOS",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUOSY",
+    "to": "940GZZLUHWE",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHWE",
+    "to": "940GZZLUOSY",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHWE",
+    "to": "940GZZLUHWC",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHWC",
+    "to": "940GZZLUHWE",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHWC",
+    "to": "940GZZLUHWT",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHWT",
+    "to": "940GZZLUHWC",
+    "line": "piccadilly",
+    "travelTime": 2
+  },
+  {
+    "from": "940GZZLUHWT",
+    "to": "940GZZLUHNX",
+    "line": "piccadilly",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHNX",
+    "to": "940GZZLUHWT",
+    "line": "piccadilly",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHNX",
+    "to": "940GZZLUHRC",
+    "line": "piccadilly",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHRC",
+    "to": "940GZZLUHNX",
+    "line": "piccadilly",
+    "travelTime": 4
+  },
+  {
+    "from": "940GZZLUHRC",
+    "to": "940GZZLUHR5",
+    "line": "piccadilly",
+    "travelTime": 5
+  },
+  {
+    "from": "940GZZLUHR5",
+    "to": "940GZZLUHRC",
+    "line": "piccadilly",
+    "travelTime": 5
+  },
+  {
+    "from": "940GZZLUHNX",
+    "to": "940GZZLUHR4",
+    "line": "piccadilly",
+    "travelTime": 3
+  },
+  {
+    "from": "940GZZLUHR4",
+    "to": "940GZZLUHNX",
     "line": "piccadilly",
     "travelTime": 3
   },
@@ -3432,6 +5724,54 @@
     "travelTime": 4
   },
   {
+    "from": "910GCHESHNT",
+    "to": "910GTHBLDSG",
+    "line": "weaver",
+    "travelTime": 3
+  },
+  {
+    "from": "910GTHBLDSG",
+    "to": "910GCHESHNT",
+    "line": "weaver",
+    "travelTime": 3
+  },
+  {
+    "from": "910GTHBLDSG",
+    "to": "910GTURKYST",
+    "line": "weaver",
+    "travelTime": 4
+  },
+  {
+    "from": "910GTURKYST",
+    "to": "910GTHBLDSG",
+    "line": "weaver",
+    "travelTime": 4
+  },
+  {
+    "from": "910GTURKYST",
+    "to": "910GSBURY",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GSBURY",
+    "to": "910GTURKYST",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GSBURY",
+    "to": "910GEDMNGRN",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GEDMNGRN",
+    "to": "910GSBURY",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
     "from": "910GEDMNGRN",
     "to": "910GSIVRST",
     "line": "weaver",
@@ -3526,6 +5866,258 @@
     "to": "910GRCTRYRD",
     "line": "weaver",
     "travelTime": 2
+  },
+  {
+    "from": "910GHAKNYNM",
+    "to": "910GLONFLDS",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GLONFLDS",
+    "to": "910GHAKNYNM",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GLONFLDS",
+    "to": "910GCAMHTH",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GCAMHTH",
+    "to": "910GLONFLDS",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GCAMHTH",
+    "to": "910GBTHNLGR",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GBTHNLGR",
+    "to": "910GCAMHTH",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GBTHNLGR",
+    "to": "910GLIVST",
+    "line": "weaver",
+    "travelTime": 3
+  },
+  {
+    "from": "910GLIVST",
+    "to": "910GBTHNLGR",
+    "line": "weaver",
+    "travelTime": 3
+  },
+  {
+    "from": "910GENFLDTN",
+    "to": "910GBHILLPK",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GBHILLPK",
+    "to": "910GENFLDTN",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GBHILLPK",
+    "to": "910GEDMNGRN",
+    "line": "weaver",
+    "travelTime": 4
+  },
+  {
+    "from": "910GEDMNGRN",
+    "to": "910GBHILLPK",
+    "line": "weaver",
+    "travelTime": 4
+  },
+  {
+    "from": "910GCHINGFD",
+    "to": "910GHGHMSPK",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GHGHMSPK",
+    "to": "910GCHINGFD",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GHGHMSPK",
+    "to": "910GWDST",
+    "line": "weaver",
+    "travelTime": 4
+  },
+  {
+    "from": "910GWDST",
+    "to": "910GHGHMSPK",
+    "line": "weaver",
+    "travelTime": 4
+  },
+  {
+    "from": "910GWDST",
+    "to": "910GWLTWCEN",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GWLTWCEN",
+    "to": "910GWDST",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GWLTWCEN",
+    "to": "910GSTJMSST",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSTJMSST",
+    "to": "910GWLTWCEN",
+    "line": "weaver",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSTJMSST",
+    "to": "910GCLAPTON",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GCLAPTON",
+    "to": "910GSTJMSST",
+    "line": "weaver",
+    "travelTime": 5
+  },
+  {
+    "from": "910GCLAPTON",
+    "to": "910GHAKNYNM",
+    "line": "weaver",
+    "travelTime": 3
+  },
+  {
+    "from": "910GHAKNYNM",
+    "to": "910GCLAPTON",
+    "line": "weaver",
+    "travelTime": 3
+  },
+  {
+    "from": "910GWCROYDN",
+    "to": "910GNORWDJ",
+    "line": "windrush",
+    "travelTime": 5
+  },
+  {
+    "from": "910GNORWDJ",
+    "to": "910GWCROYDN",
+    "line": "windrush",
+    "travelTime": 5
+  },
+  {
+    "from": "910GNORWDJ",
+    "to": "910GANERLEY",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GANERLEY",
+    "to": "910GNORWDJ",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GANERLEY",
+    "to": "910GPENEW",
+    "line": "windrush",
+    "travelTime": 1
+  },
+  {
+    "from": "910GPENEW",
+    "to": "910GANERLEY",
+    "line": "windrush",
+    "travelTime": 1
+  },
+  {
+    "from": "910GPENEW",
+    "to": "910GSYDENHM",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSYDENHM",
+    "to": "910GPENEW",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GSYDENHM",
+    "to": "910GFORESTH",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GFORESTH",
+    "to": "910GSYDENHM",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GFORESTH",
+    "to": "910GHONROPK",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GHONROPK",
+    "to": "910GFORESTH",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GHONROPK",
+    "to": "910GBROCKLY",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GBROCKLY",
+    "to": "910GHONROPK",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GBROCKLY",
+    "to": "910GNEWXGTE",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GNEWXGTE",
+    "to": "910GBROCKLY",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GNEWXGTE",
+    "to": "910GSURREYQ",
+    "line": "windrush",
+    "travelTime": 4
+  },
+  {
+    "from": "910GSURREYQ",
+    "to": "910GNEWXGTE",
+    "line": "windrush",
+    "travelTime": 4
   },
   {
     "from": "910GSURREYQ",
@@ -3658,5 +6250,101 @@
     "to": "910GCNNB",
     "line": "windrush",
     "travelTime": 2
+  },
+  {
+    "from": "910GCLPHMJ1",
+    "to": "910GWNDSWRD",
+    "line": "windrush",
+    "travelTime": 4
+  },
+  {
+    "from": "910GWNDSWRD",
+    "to": "910GCLPHMJ1",
+    "line": "windrush",
+    "travelTime": 4
+  },
+  {
+    "from": "910GWNDSWRD",
+    "to": "910GCLPHHS",
+    "line": "windrush",
+    "travelTime": 1
+  },
+  {
+    "from": "910GCLPHHS",
+    "to": "910GWNDSWRD",
+    "line": "windrush",
+    "travelTime": 1
+  },
+  {
+    "from": "910GCLPHHS",
+    "to": "910GDENMRKH",
+    "line": "windrush",
+    "travelTime": 5
+  },
+  {
+    "from": "910GDENMRKH",
+    "to": "910GCLPHHS",
+    "line": "windrush",
+    "travelTime": 5
+  },
+  {
+    "from": "910GDENMRKH",
+    "to": "910GPCKHMRY",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GPCKHMRY",
+    "to": "910GDENMRKH",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GPCKHMRY",
+    "to": "910GPCKHMQD",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GPCKHMQD",
+    "to": "910GPCKHMRY",
+    "line": "windrush",
+    "travelTime": 2
+  },
+  {
+    "from": "910GPCKHMQD",
+    "to": "910GSURREYQ",
+    "line": "windrush",
+    "travelTime": 4
+  },
+  {
+    "from": "910GSURREYQ",
+    "to": "910GPCKHMQD",
+    "line": "windrush",
+    "travelTime": 4
+  },
+  {
+    "from": "910GCRYSTLP",
+    "to": "910GSYDENHM",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GSYDENHM",
+    "to": "910GCRYSTLP",
+    "line": "windrush",
+    "travelTime": 3
+  },
+  {
+    "from": "910GNWCRELL",
+    "to": "910GSURREYQ",
+    "line": "windrush",
+    "travelTime": 4
+  },
+  {
+    "from": "910GSURREYQ",
+    "to": "910GNWCRELL",
+    "line": "windrush",
+    "travelTime": 4
   }
 ]

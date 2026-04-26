@@ -319,109 +319,116 @@ async function build(): Promise<void> {
       continue;
     }
 
-    // Collect the longest stop sequence for this line (most complete route)
-    const longestSequence = seq.stopPointSequences.reduce(
-      (best, current) =>
-        current.stopPoint.length > best.stopPoint.length ? current : best,
-      seq.stopPointSequences[0]
-    );
+    if(!seq.stopPointSequences?.length){
 
-    if (!longestSequence) {
-      console.log("NO SEQUENCE");
+      console.log("NO SEQUENCE")
       continue;
+
     }
 
-    const stops = longestSequence.stopPoint;
     let lineNicolaHits = 0;
     let lineHaversineHits = 0;
+    let totalStops = 0;
 
-    for (let i = 0; i < stops.length; i++) {
-      const stop = stops[i];
+    for(const sequence of seq.stopPointSequences){
 
-      // Register station
-      if (!stationsMap.has(stop.id)) {
-        stationsMap.set(stop.id, {
-          id: stop.id,
-          name: stop.name
-            .replace(/\s*Underground\s*Station\s*$/i, "")
-            .replace(/\s*Station\s*$/i, "")
-            .trim(),
-          lines: [],
-          lat: stop.lat,
-          lng: stop.lon,
-          zone: stop.zone ?? "unknown",
-        });
-      }
+      const stops = sequence.stopPoint;
+      if(!stops?.length) continue
 
-      // Add line to station's line list
-      const station = stationsMap.get(stop.id)!;
-      if (!station.lines.includes(line.id)) {
-        station.lines.push(line.id);
-      }
+      totalStops += stops.length;
 
-      // Register edge to next stop
-      if (i < stops.length - 1) {
-        const next = stops[i + 1];
-        const edgeKey = `${stop.id}|${next.id}|${line.id}`;
+      for(let i = 0; i < stops.length; i++){
 
-        if (!connectionsMap.has(edgeKey)) {
-          let travelTime: number;
+        const stop = stops[i];
 
-          if (TUBE_LINE_IDS.has(line.id)) {
-            // Try nicola/tubemaps lookup
-            const lookupKey = `${normaliseName(stop.name)}|${normaliseName(next.name)}`;
-            const nicolaTime = nicolaLookup.get(lookupKey);
+        if(!stationsMap.has(stop.id)){
 
-            if (nicolaTime !== undefined) {
-              travelTime = nicolaTime;
-              lineNicolaHits++;
-              nicolaHits++;
-            } else {
-              // Fallback to haversine even for tube lines
-              travelTime = approxTravelTime(
-                stop.lat,
-                stop.lon,
-                next.lat,
-                next.lon
-              );
-              lineHaversineHits++;
-              haversineHits++;
-            }
-          } else {
-            // Elizabeth line / Overground: always haversine
-            travelTime = approxTravelTime(
-              stop.lat,
-              stop.lon,
-              next.lat,
-              next.lon
-            );
-            lineHaversineHits++;
-            haversineHits++;
-          }
-
-          connectionsMap.set(edgeKey, {
-            from: stop.id,
-            to: next.id,
-            line: line.id,
-            travelTime,
+          stationsMap.set(stop.id, {
+            id: stop.id,
+            name: stop.name
+              .replace(/\s*Underground\s*Station\s*$/i, "")
+              .replace(/\s*Station\s*$/i, "")
+              .trim(),
+            lines: [],
+            lat: stop.lat,
+            lng: stop.lon,
+            zone: stop.zone ?? "unknown"
           });
 
-          // Add reverse edge (same weight — trains run both directions)
-          const reverseKey = `${next.id}|${stop.id}|${line.id}`;
-          if (!connectionsMap.has(reverseKey)) {
-            connectionsMap.set(reverseKey, {
-              from: next.id,
-              to: stop.id,
-              line: line.id,
-              travelTime,
-            });
-          }
         }
+
+        const station = stationsMap.get(stop.id)!;
+        if(!station.lines.includes(line.id)){
+
+          station.lines.push(line.id);
+
+        }
+
+        if(i < stops.length - 1){
+
+          const next = stops[i + 1]
+          const edgeKey = `${stop.id}|${next.id}|${line.id}`;
+
+          if(!connectionsMap.has(edgeKey)){
+
+            let travelTime: number;
+
+            if(TUBE_LINE_IDS.has(line.id)){
+
+              const lookupKey = `${normaliseName(stop.name)}|${normaliseName(next.name)}`;
+              const nicolaTime = nicolaLookup.get(lookupKey);
+
+              if(nicolaTime !== undefined){
+
+                travelTime = nicolaTime
+                lineNicolaHits++
+                nicolaHits++
+
+              } else {
+
+                travelTime = approxTravelTime(stop.lat, stop.lon, next.lat, next.lon)
+                lineHaversineHits++
+                haversineHits++
+
+              }
+
+            } else {
+
+              travelTime = approxTravelTime(stop.lat, stop.lon, next.lat, next.lon)
+              lineHaversineHits++
+              haversineHits++
+
+            }
+
+            connectionsMap.set(edgeKey, {
+              from: stop.id,
+              to: next.id,
+              line: line.id,
+              travelTime
+            })
+
+            const reverseKey = `${next.id}|${stop.id}|${line.id}`
+            if(!connectionsMap.has(reverseKey)){
+
+              connectionsMap.set(reverseKey, {
+                from: next.id,
+                to: stop.id,
+                line: line.id,
+                travelTime
+              })
+
+            }
+
+          }
+
+        }
+
       }
+
     }
 
     console.log(
-      `OK (${stops.length} stops, ${lineNicolaHits} FOI / ${lineHaversineHits} approx)`
+      `OK (${totalStops} stops across ${seq.stopPointSequences.length} branches, ${lineNicolaHits} FOI / ${lineHaversineHits} approx)`
     );
 
     // Avoid hammering the API
