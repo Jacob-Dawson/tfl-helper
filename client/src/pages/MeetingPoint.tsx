@@ -278,18 +278,42 @@ export default function MeetingPoint(){
 
     // Restore stations from URL params on load
     useEffect(() => {
-        if(!stations.length) return;
+        if(!stations.length || !graph) return;
         const fromId = searchParams.get("from");
         const toId = searchParams.get("to");
-        if(fromId){
-            const s = stations.find((s) => s.id === fromId);
-            if(s) setStationA(s);
+        if(!fromId || !toId) return
+
+        const a = stations.find((s) => s.id === fromId);
+        const b = stations.find((s) => s.id === toId);
+        
+        if(a) setStationA(a);
+        if(b) setStationB(b);
+
+        // Auto-calculate if both stations found in URL params
+        if(a && b && a.id !== b.id){
+
+            setCalculating(true);
+            setError(null);
+            setTimeout(() => {
+
+                const found = findMeetingPoint(graph, a.id, b.id, disruptions)
+                if(!found){
+
+                    setError("No meeting point found between those stations.")
+
+                } else {
+
+                    setResult(found);
+
+                }
+
+                setCalculating(false);
+
+            }, 50)
+
         }
-        if(toId){
-            const s = stations.find((s) => s.id === toId);
-            if(s) setStationB(s);
-        }
-    }, [stations])
+        
+    }, [stations, graph])
 
     function handleFind(){
 
@@ -485,8 +509,10 @@ export default function MeetingPoint(){
                                             </button>
                                             
                                             {expandedLine === line.id && line.reason && (
-                                                <div className="px-4 py-3 border-t border-gray-800 text-xs text-gray-400 leading-relaxed">
-                                                    {line.reason}
+                                                <div className="px-4 py-3 border-t border-gray-800 text-xs text-gray-400 leading-relaxed space-y-2">
+                                                    {line.reason.split("\n\n").map((r, i) => (
+                                                        <p key={i}>{r}</p>
+                                                    ))}
                                                 </div>
                                             )}
 

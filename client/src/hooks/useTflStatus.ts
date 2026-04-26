@@ -57,14 +57,24 @@ export function useTflStatus(): {
                 const map = new Map<string, LineStatus>();
                 for(const line of data){
 
-                    const topStatus = line.lineStatuses[0];
-                    if(!topStatus) continue;
+                    if(!line.lineStatuses?.length) continue;
+                    // Takes the worst status
+                    const worstStatus = line.lineStatuses.reduce((worst, current) => 
+                        current.statusSeverity < worst.statusSeverity ? current : worst
+                    );
+
+                    // collect all unique reasons across all statuses
+                    const allReasons = line.lineStatuses
+                        .map((s) => s.reason ?? "")
+                        .filter(Boolean)
+                        .filter((r, i, arr) => arr.indexOf(r) === i) // deduplicate
+                
                     map.set(line.id, {
                         id: line.id,
                         name: line.name,
-                        severity: topStatus.statusSeverity,
-                        description: topStatus.statusSeverityDescription,
-                        reason: topStatus.reason ?? ""
+                        severity: worstStatus.statusSeverity,
+                        description: worstStatus.statusSeverityDescription,
+                        reason: allReasons.join("\n\n")
                     });
 
                 }

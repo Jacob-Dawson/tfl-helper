@@ -1,4 +1,3 @@
-import { line } from "d3";
 import type { Graph, DijkstraResult, JourneyStep} from "./types";
 
 // Min-heap priority queue - Each entry is [priority, stationId]
