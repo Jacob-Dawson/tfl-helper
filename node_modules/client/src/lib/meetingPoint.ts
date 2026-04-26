@@ -1,5 +1,5 @@
 import type { Graph, DijkstraResult, MeetingPointResult } from "./types";
-import { dijkstra } from "./dijkstra";
+import { dijkstra, reconstructPath } from "./dijkstra";
 
 // Distruption weight multipliers by Tfl severity code.
 // Lower severity code = worse disruption in Tfl's scheme.
@@ -99,9 +99,18 @@ export function findMeetingPoint(
                 station: node.station,
                 timeFromA,
                 timeFromB,
-                totalTime
+                totalTime,
+                pathA: [],
+                pathB: []
             };
         }
+
+    }
+
+    if(best){
+
+        best.pathA = reconstructPath(adjustedGraph, resultA, best.station.id)
+        best.pathB = reconstructPath(adjustedGraph, resultB, best.station.id)
 
     }
 

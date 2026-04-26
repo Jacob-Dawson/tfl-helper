@@ -31,6 +31,15 @@ export type Graph = Map<string, GraphNode>;
 export interface DijkstraResult {
     distances: Map<string, number>; // station id -> mins from source
     previous: Map<string, string | null>; // station id -> previous station id
+    // Tracks which line was used to reach each station
+    lineUsed: Map<string, string>;
+}
+
+export interface JourneyStep {
+    stationId: string;
+    stationName: string;
+    line: string;           // line taken FROM this station to the next
+    isChange: boolean;      // true if line changes at this station
 }
 
 export interface MeetingPointResult {
@@ -38,4 +47,6 @@ export interface MeetingPointResult {
     timeFromA: number;
     timeFromB: number;
     totalTime: number;
+    pathA: JourneyStep[];
+    pathB: JourneyStep[];
 }

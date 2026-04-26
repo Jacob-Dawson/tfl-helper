@@ -5,6 +5,7 @@ export interface LineStatus{
     name: string;
     severity: number;       // TfL severity code
     description: string;    // eg. "Good service", "Minor Delays"
+    reason: string; // full description reason from TfL
 }
 
 interface TflLineStatus{
@@ -13,6 +14,7 @@ interface TflLineStatus{
     lineStatuses: Array<{
         statusSeverity: number;
         statusSeverityDescription: string;
+        reason?: string;
     }>;
 }
 
@@ -61,7 +63,8 @@ export function useTflStatus(): {
                         id: line.id,
                         name: line.name,
                         severity: topStatus.statusSeverity,
-                        description: topStatus.statusSeverityDescription
+                        description: topStatus.statusSeverityDescription,
+                        reason: topStatus.reason ?? ""
                     });
 
                 }

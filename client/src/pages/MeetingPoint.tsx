@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSearchParams } from "react-router-dom"
 import { useGraph } from "../lib/GraphContext"
 import { useTflStatus } from "../hooks/useTflStatus"
 import { findMeetingPoint } from "../lib/meetingPoint"
 import StationSearch from "../components/StationSearch"
-import type { Station, MeetingPointResult } from "../lib/types"
+import type { Station, MeetingPointResult, JourneyStep } from "../lib/types"
 
 // Tfl line brand colours - used for status pills
 const LINE_COLOURS: Record<string, string> = {
@@ -29,6 +30,27 @@ const LINE_COLOURS: Record<string, string> = {
     //"london-overground": "#EF7B10"
 }
 
+const LINE_NAMES: Record<string, string> = {
+    bakerloo: "Bakerloo",
+    central: "Central",
+    circle: "Circle",
+    district: "District",
+    "hammersmith-city": "Hammersmith & City",
+    jubilee: "Jubilee",
+    metropolitan: "Metropolitan",
+    northern: "Northern",
+    piccadilly: "Piccadilly",
+    victoria: "Victoria",
+    "waterloo-city": "Waterloo & City",
+    "elizabeth-line": "Elizabeth line",
+    lioness: "Lioness",
+    mildmay: "Mildmay",
+    windrush: "Windrush",
+    weaver: "Weaver",
+    suffragette: "Suffragette",
+    liberty: "Liberty"
+}
+
 function SeverityBadge({ description, severity }: {description: string; severity: number}){
 
     const color = 
@@ -51,8 +73,108 @@ function SeverityBadge({ description, severity }: {description: string; severity
 
 }
 
-function ResultCard({result}: {result: MeetingPointResult}){
+function JourneyBreakdown({
+    steps,
+    label,
+    accentColor
+}: {
+    steps: JourneyStep[];
+    label: string;
+    accentColor: string;
+}){
 
+    if(!steps.length) return null;
+
+    // Group consecutive steps by line into segments
+    type Segment = { line: string; stations: string[]};
+    const segments: Segment[] = [];
+
+    for(const step of steps){
+
+        const last = segments[segments.length - 1];
+        if(!last || (step.isChange && step.line !== "")){
+
+            segments.push({line: step.line, stations: [step.stationName]})
+
+        } else {
+
+            last.stations.push(step.stationName)
+
+        }
+
+    }
+
+    return (
+        <div className="mt-4">
+            <p 
+                className="text-xs uppercase tracking-widest font-medium mb-3"
+                style={{color: accentColor}}
+            >
+                {label}'s Journey
+            </p>
+            <div className="space-y-3">
+                {segments.map((seg, i) => (
+                    <div key={i} className="flex gap-3">
+                        {/* Line indicator */}
+                        <div className="flex flex-col items-center gap-1 pt-1">
+                            <div
+                                className="w-3 h-3 rounded-full shrink-0"
+                                style={{
+                                    backgroundColor: LINE_COLOURS[seg.line] ?? "#666"
+                                }}
+                            />
+                            {i < segments.length - 1 && (
+                                <div
+                                    className="w-0.5 flex-1 min-h-4"
+                                    style={{
+                                        backgroundColor: LINE_COLOURS[seg.line] ?? "#666"
+                                    }}
+                                />
+                            )}
+                        </div>
+                        {/* Stations */}
+                        <div className="pb-3">
+                            <p className="text-xs font-medium text-gray-400 mb-1">
+                                {LINE_NAMES[seg.line] ?? seg.line}
+                            </p>
+                            {seg.stations.map((name, j) => (
+                                <p
+                                    key={j}
+                                    className={`text-sm ${
+                                        j === 0 || j === seg.stations.length - 1
+                                            ? "text-white font-medium"
+                                            : "text-gray-500"
+                                    }`}
+                                >
+                                    {j > 0 &&
+                                        j < seg.stations.length - 1 && 
+                                        seg.stations.length > 3
+                                        ? j === 1
+                                            ? `${seg.stations.length - 2} stops`
+                                            : null
+                                        : name}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+
+}
+
+function ResultCard({
+    result, 
+    stationA, 
+    stationB
+}: {
+    result: MeetingPointResult
+    stationA: Station
+    stationB: Station
+}){
+
+    const [showJourney, setShowJourney] = useState(false);
     const fairnessDiff = Math.abs(result.timeFromA - result.timeFromB)
 
     return (
@@ -70,7 +192,7 @@ function ResultCard({result}: {result: MeetingPointResult}){
             <div className="grid grid-cols-2 divide-x divide-gray-700">
                 <div className="px-6 py-5">
                     <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">
-                        Person A
+                        {stationA.name}
                     </p>
                     <p className="text-3xl font-bold text-blue-400">
                         {result.timeFromA}
@@ -79,7 +201,7 @@ function ResultCard({result}: {result: MeetingPointResult}){
                 </div>
                 <div className="px-6 py-5">
                     <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">
-                        Person B
+                        {stationB.name}
                     </p>
                     <p className="text-3xl font-bold text-violet-400">
                         {result.timeFromB}
@@ -109,6 +231,32 @@ function ResultCard({result}: {result: MeetingPointResult}){
                     </span>
                 </p>
             </div>
+
+            {/* Journey breakdown toggle */}
+            <div className="border-t border-gray-700">
+                <button
+                    onClick={() => setShowJourney((v) => !v)}
+                    className="w-full px-6 py-3 text-sm text-gray-400 hover:text-white hover:bg-gray-800 transition-colors flex items-center justify-between"
+                >
+                    <span>Show journey breakdown</span>
+                    <span className="text-lg leading-none">{showJourney ? "↑" : "↓"}</span>
+                </button>
+
+                {showJourney && (
+                    <div className="px-6 pb-6 border-t border-gray-800 pt-4 space-y-6">
+                        <JourneyBreakdown
+                            steps={result.pathA}
+                            label="Person A"
+                            accentColor="#60a5fa"
+                        />
+                        <JourneyBreakdown
+                            steps={result.pathB}
+                            label="Person B"
+                            accentColor="#a78bfa"
+                        />
+                    </div>
+                )}
+            </div>
         </div>
     )
 
@@ -118,12 +266,30 @@ export default function MeetingPoint(){
 
     const { graph, stations, loading: graphLoading } = useGraph();
     const { statuses, disruptions, loading: statusLoading } = useTflStatus();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const [stationA, setStationA] = useState<Station | null>(null);
     const [stationB, setStationB] = useState<Station | null>(null);
     const [result, setResult] = useState<MeetingPointResult | null>(null);
     const [calculating, setCalculating] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [expandedLine, setExpandedLine] = useState<string | null>(null);
+    const [copied, setCopied] = useState(false);
+
+    // Restore stations from URL params on load
+    useEffect(() => {
+        if(!stations.length) return;
+        const fromId = searchParams.get("from");
+        const toId = searchParams.get("to");
+        if(fromId){
+            const s = stations.find((s) => s.id === fromId);
+            if(s) setStationA(s);
+        }
+        if(toId){
+            const s = stations.find((s) => s.id === toId);
+            if(s) setStationB(s);
+        }
+    }, [stations])
 
     function handleFind(){
 
@@ -134,6 +300,9 @@ export default function MeetingPoint(){
             return
 
         }
+
+        // Update URL params
+        setSearchParams({from: stationA.id, to: stationB.id})
 
         setCalculating(true);
         setError(null);
@@ -155,6 +324,15 @@ export default function MeetingPoint(){
             setCalculating(false);
 
         }, 50)
+
+    }
+
+    function handleCopyLink(){
+
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
 
     }
 
@@ -229,14 +407,25 @@ export default function MeetingPoint(){
                             </div>
                         </div>
 
-                        {/* Find button */}
-                        <button
-                            onClick={handleFind}
-                            disabled={!canFind}
-                            className="mt-6 w-full py-3 rounded-lg font-semibold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-blue-600 hover:bg-blue-500 active:scale-95"
-                        >
-                            {calculating ? "Calculating..." : "Find Meeting Point"}
-                        </button>
+                        {/* Actions */}
+                        <div className="mt-6 flex gap-3">
+                            <button
+                                onClick={handleFind}
+                                disabled={!canFind}
+                                className="flex-1 py-3 rounded-lg font-semibold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-blue-600 hover:bg-blue-500 active:scale-95"
+                            >
+                                {calculating ? "Calculating..." : "Find Meeting Point"}
+                            </button>
+
+                            {result && (
+                                <button
+                                    onClick={handleCopyLink}
+                                    className="px-4 py-3 rounded-lg text-sm font-medium transition-all bg-gray-800 hover:bg-gray-700 active:scale-95 shrink-0"
+                                >
+                                    {copied ? "Copied ✓" : "Share"}
+                                </button>
+                            )}
+                        </div>
 
                         {/* Error */}
                         {error && (
@@ -244,7 +433,13 @@ export default function MeetingPoint(){
                         )}
 
                         {/* Result */}
-                        {result && <ResultCard result={result} />}
+                        {result && stationA && stationB && (
+                            <ResultCard 
+                                result={result}
+                                stationA={stationA}
+                                stationB={stationB}
+                            />
+                        )}
 
                         {/* Live disruptions */}
                         {disruptedLines.length > 0 && (
@@ -256,22 +451,50 @@ export default function MeetingPoint(){
                                     {disruptedLines.map((line) => (
                                         <div
                                             key={line.id}
-                                            className="flex items-center justify-between px-4 py-2.5 rounded-lg bg-gray-900 border border-gray-800"
+                                            className="rounded-lg bg-gray-900 border border-gray-800 overflow-hidden"
                                         >
-                                            <div className="flex items-center gap-2.5">
-                                                <span
-                                                    className="w-2.5 h-2.5 rounded-full shrink-0"
-                                                    style={{
-                                                        backgroundColor:
-                                                            LINE_COLOURS[line.id] ?? "#666"
-                                                    }}
-                                                />
-                                                <span className="text-sm text-gray-300">{line.name}</span>
-                                            </div>
-                                            <SeverityBadge
-                                                description={line.description}
-                                                severity={line.severity}
-                                            />
+                                            <button
+                                                onClick={() => 
+                                                    setExpandedLine(
+                                                        expandedLine === line.id ? null : line.id
+                                                    )
+                                                }
+                                                className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-gray-800 transition-colors"
+                                            >
+                                                <div className="flex items-center gap-2.5">
+                                                    <span
+                                                        className="w-2.5 h-2.5 rounded-full shrink-0"
+                                                        style={{
+                                                            backgroundColor:
+                                                                LINE_COLOURS[line.id] ?? "#666"
+                                                        }}
+                                                    />
+                                                    <span className="text-sm text-gray-300">
+                                                        {line.name}
+                                                    </span>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <SeverityBadge
+                                                        description={line.description}
+                                                        severity={line.severity}
+                                                    />
+                                                    <span className="text-gray-600 text-sm">
+                                                        {expandedLine === line.id ? "↑" : "↓"}
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            
+                                            {expandedLine === line.id && line.reason && (
+                                                <div className="px-4 py-3 border-t border-gray-800 text-xs text-gray-400 leading-relaxed">
+                                                    {line.reason}
+                                                </div>
+                                            )}
+
+                                            {expandedLine === line.id && !line.reason && (
+                                                <div className="px-4 py-3 border-t border-gray-800 text-xs text-gray-500 italic">
+                                                    No further details available.
+                                                </div>
+                                            )}
                                         </div>
                                     ))}
                                 </div>

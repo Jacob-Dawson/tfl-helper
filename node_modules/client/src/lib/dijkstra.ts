@@ -1,4 +1,5 @@
-import type { Graph, DijkstraResult} from "./types";
+import { line } from "d3";
+import type { Graph, DijkstraResult, JourneyStep} from "./types";
 
 // Min-heap priority queue - Each entry is [priority, stationId]
 
@@ -68,6 +69,7 @@ class MinHeap {
 export function dijkstra(graph: Graph, sourceId: string): DijkstraResult {
     const distances = new Map<string, number>();
     const previous = new Map<string, string | null>();
+    const lineUsed = new Map<string, string>();
     const visited = new Set<string>();
     const pq = new MinHeap();
 
@@ -103,6 +105,7 @@ export function dijkstra(graph: Graph, sourceId: string): DijkstraResult {
 
                 distances.set(edge.to, newDist);
                 previous.set(edge.to, currentId);
+                lineUsed.set(edge.to, edge.line);
                 pq.push([newDist, edge.to])
 
             }
@@ -111,24 +114,47 @@ export function dijkstra(graph: Graph, sourceId: string): DijkstraResult {
 
     }
 
-    return { distances, previous };
+    return { distances, previous, lineUsed };
 }
 
 // Reconstruct the path from source to target using the previous node map
 
 export function reconstructPath(
-    previous: Map<string, string | null>,
+
+    graph: Graph,
+    result: DijkstraResult,
     targetId: string
-): string[] {
-    const path: string[] = [];
+
+): JourneyStep[] {
+
+    const { previous, lineUsed } = result;
+    const steps: JourneyStep[] = [];
+
     let current: string | null = targetId;
 
     while(current !== null){
 
-        path.unshift(current);
+        const node = graph.get(current)
+        if(!node) break;
+
+        const line = lineUsed.get(current) ?? "";
+        steps.unshift({
+            stationId: current,
+            stationName: node.station.name,
+            line,
+            isChange: false // calculated below
+        })
+
         current = previous.get(current) ?? null;
 
     }
 
-    return path;
+    // Annotate line changes
+    for(let i = 1; i < steps.length; i++){
+
+        steps[i].isChange = steps[i].line !== steps[i - 1].line && steps[i - 1].line !== "";
+
+    }
+
+    return steps;
 }
