@@ -26,8 +26,9 @@ const LINE_COLOURS: Record<string, string> = {
     windrush: "#E51836",
     weaver: "#9B0058",
     suffragette: "#00853D",
-    liberty: "#747678"
+    liberty: "#747678",
     //"london-overground": "#EF7B10"
+    interchange: "#6b7280"
 }
 
 const LINE_NAMES: Record<string, string> = {
@@ -48,7 +49,8 @@ const LINE_NAMES: Record<string, string> = {
     windrush: "Windrush",
     weaver: "Weaver",
     suffragette: "Suffragette",
-    liberty: "Liberty"
+    liberty: "Liberty",
+    interchange: "Walk"
 }
 
 function SeverityBadge({ description, severity }: {description: string; severity: number}){
@@ -86,21 +88,44 @@ function JourneyBreakdown({
     if(!steps.length) return null;
 
     // Group consecutive steps by line into segments
-    type Segment = { line: string; stations: string[]};
+    type Segment = { 
+        line: string; 
+        stations: string[]
+        towards: string
+    };
     const segments: Segment[] = [];
 
-    for(const step of steps){
+    for(let i = 0; i < steps.length; i++){
 
+        const step = steps[i];
         const last = segments[segments.length - 1];
+
         if(!last || (step.isChange && step.line !== "")){
 
-            segments.push({line: step.line, stations: [step.stationName]})
+            // When changing lines, include the previous station as the boarding point for the new segment so theres no gap
+            const boardAt = step.isChange && i > 0 ? steps[i - 1].stationName : step.stationName;
+
+            segments.push({
+                line: step.line,
+                stations: step.isChange && i > 0
+                    ? [boardAt, step.stationName]
+                    : [step.stationName],
+                towards: "" // filled in below
+            })
 
         } else {
 
             last.stations.push(step.stationName)
 
         }
+
+    }
+
+    // "towards" = last station in each segment (interchange or destination)
+
+    for(const seg of segments){
+
+        seg.towards = seg.stations[seg.stations.length - 1]
 
     }
 
@@ -112,7 +137,7 @@ function JourneyBreakdown({
             >
                 {label}'s Journey
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
                 {segments.map((seg, i) => (
                     <div key={i} className="flex gap-3">
                         {/* Line indicator */}
@@ -132,29 +157,50 @@ function JourneyBreakdown({
                                 />
                             )}
                         </div>
-                        {/* Stations */}
-                        <div className="pb-3">
-                            <p className="text-xs font-medium text-gray-400 mb-1">
+
+                        {/* Segment content */}
+                        <div className="pb-3 flex-1">
+                            {/*Line name + direction */}
+                            <p className="text-xs font-semibold text-gray-300 mb-1">
                                 {LINE_NAMES[seg.line] ?? seg.line}
+                                <span className="text-gray-500 font-normal">
+                                    {" "}· towards {seg.towards}
+                                </span>
                             </p>
-                            {seg.stations.map((name, j) => (
-                                <p
-                                    key={j}
-                                    className={`text-sm ${
-                                        j === 0 || j === seg.stations.length - 1
-                                            ? "text-white font-medium"
-                                            : "text-gray-500"
-                                    }`}
-                                >
-                                    {j > 0 &&
-                                        j < seg.stations.length - 1 && 
-                                        seg.stations.length > 3
-                                        ? j === 1
-                                            ? `${seg.stations.length - 2} stops`
-                                            : null
-                                        : name}
+
+                            {/* Stations */}
+                            {seg.stations.map((name, j) => {
+                                const isFirst = j === 0;
+                                const isLast = j === seg.stations.length - 1;
+                                const isIntermediate = !isFirst && !isLast;
+                                const isCollapsed = isIntermediate && seg.stations.length > 3 && j !== 1
+                                const isCollapseLabel = isIntermediate && seg.stations.length > 3 && j === 1
+
+                                return(
+                                    <p
+                                        key={j}
+                                        className={`text-sm ${
+                                            isFirst || isLast
+                                                ? "text-white font-medium"
+                                                : "text-gray-500"
+                                        }`}
+                                    >
+                                        {isCollapsed
+                                            ? null
+                                            : isCollapseLabel
+                                            ? ` ${seg.stations.length - 2} stops`
+                                            : name}
+                                    </p>
+                                )
+                            })}
+
+                            {/* Change indicator */}
+                            {i < segments.length - 1 && (
+                                <p className="text-xs text-amber-500 mt-1.5 font-medium">
+                                    ⇄ Change at {seg.stations[seg.stations.length - 1]}
                                 </p>
-                            ))}
+                            )}
+
                         </div>
                     </div>
                 ))}

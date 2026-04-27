@@ -155,5 +155,12 @@ export function reconstructPath(
 
     }
 
+    // Source station has no lineUsed entry - inherit from next step
+    if(steps.length > 1 && steps[0].line === ""){
+
+        steps[0].line = steps[1].line
+
+    }
+
     return steps;
 }
