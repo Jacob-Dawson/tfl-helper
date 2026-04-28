@@ -40,13 +40,20 @@ export interface JourneyStep {
     stationName: string;
     line: string;           // line taken FROM this station to the next
     isChange: boolean;      // true if line changes at this station
+    travelTime: number;     // minutes to reach this step from the previous 
+}
+
+export interface PersonResult {
+    label: string;          // "Person A", "Person B", etc
+    accentColor: string;
+    stationName: string;    // their origin station name
+    travelTime: number;     // total minutes to meeting point
+    path: JourneyStep[];
 }
 
 export interface MeetingPointResult {
     station: Station;
-    timeFromA: number;
-    timeFromB: number;
     totalTime: number;
-    pathA: JourneyStep[];
-    pathB: JourneyStep[];
+    maxTime: number;        // the fairness metric - lowest max across all candidates
+    people: PersonResult[];
 }

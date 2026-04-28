@@ -126,7 +126,7 @@ export function reconstructPath(
 
 ): JourneyStep[] {
 
-    const { previous, lineUsed } = result;
+    const { previous, lineUsed, distances } = result;
     const steps: JourneyStep[] = [];
 
     let current: string | null = targetId;
@@ -136,15 +136,30 @@ export function reconstructPath(
         const node = graph.get(current)
         if(!node) break;
 
+        const prev = previous.get(current) ?? null;
         const line = lineUsed.get(current) ?? "";
+
+        // Travel time for this step = distance[current] - distance[prev]
+        const distCurrent = distances.get(current) ?? 0;
+        const distPrev = prev !== null ? (distances.get(prev) ?? 0) : 0;
+        const travelTime = prev !== null ? distCurrent - distPrev : 0; 
+
         steps.unshift({
             stationId: current,
             stationName: node.station.name,
             line,
-            isChange: false // calculated below
+            isChange: false, // calculated below
+            travelTime
         })
 
-        current = previous.get(current) ?? null;
+        current = prev;
+
+    }
+
+    // Source station inherits line from next step
+    if(steps.length > 1 && steps[0].line === ""){
+
+        steps[0].line = steps[1].line;
 
     }
 
@@ -152,13 +167,6 @@ export function reconstructPath(
     for(let i = 1; i < steps.length; i++){
 
         steps[i].isChange = steps[i].line !== steps[i - 1].line && steps[i - 1].line !== "";
-
-    }
-
-    // Source station has no lineUsed entry - inherit from next step
-    if(steps.length > 1 && steps[0].line === ""){
-
-        steps[0].line = steps[1].line
 
     }
 

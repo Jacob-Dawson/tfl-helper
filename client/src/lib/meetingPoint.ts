@@ -1,4 +1,4 @@
-import type { Graph, DijkstraResult, MeetingPointResult } from "./types";
+import type { Graph, DijkstraResult, MeetingPointResult, PersonResult } from "./types";
 import { dijkstra, reconstructPath } from "./dijkstra";
 
 // Distruption weight multipliers by Tfl severity code.
@@ -55,6 +55,16 @@ export function applyDisruptions(
 
 }
 
+// Colour palette for up to 6 people
+const PERSON_COLORS = [
+    "#60a5fa", // BLUE
+    "#a78bfa", // VIOLET
+    "#34d399", // EMERALD
+    "#f97316", // ORANGE
+    "#f43f5e", // ROSE
+    "#facc15"  // YELLOW
+]
+
 // Find the optimal meeting point between two stations,
 
 // Strategy: minimise max(timeFromA, timeFromB) - the "fairness" metric.
@@ -63,45 +73,47 @@ export function applyDisruptions(
 
 export function findMeetingPoint(
     graph: Graph,
-    stationAId: string,
-    stationBId: string,
+    stationIds: string[],
     disruptions: Map<string, number> = new Map()
 ): MeetingPointResult | null {
 
+    if(stationIds.length < 2) return null;
+
     const adjustedGraph = applyDisruptions(graph, disruptions);
 
-    const resultA: DijkstraResult = dijkstra(adjustedGraph, stationAId);
-    const resultB: DijkstraResult = dijkstra(adjustedGraph, stationBId);
+    // Run Dijkstra from every person's station
+    const results: DijkstraResult[] = stationIds.map((id) => dijkstra(adjustedGraph, id))
 
     let best: MeetingPointResult | null = null;
 
     for(const [id, node] of adjustedGraph.entries()){
 
-        const timeFromA = resultA.distances.get(id) ?? Infinity;
-        const timeFromB = resultB.distances.get(id) ?? Infinity;
+        const times = results.map((r) => r.distances.get(id) ?? Infinity)
+        if(times.some((t) => t === Infinity)) continue;
 
-        // Skip unreachable stations
-        if(timeFromA === Infinity || timeFromB === Infinity) continue;
+        // Skip source stations
+        if(stationIds.includes(id)) continue;
 
-        // Skip source stations themselves
-        if(id === stationAId || id === stationBId) continue;
-
-        const totalTime = timeFromA + timeFromB;
-        const maxTime = Math.max(timeFromA, timeFromB);
+        const maxTime = Math.max(...times);
+        const totalTime = times.reduce((a, b) => a + b, 0)
 
         if(
             best === null ||
-            maxTime < Math.max(best.timeFromA, best.timeFromB) ||
-            (maxTime === Math.max(best.timeFromA, best.timeFromB) && 
+            maxTime < best.maxTime ||
+            (maxTime === best.maxTime && 
             totalTime < best.totalTime)
         ) {
             best = {
                 station: node.station,
-                timeFromA,
-                timeFromB,
                 totalTime,
-                pathA: [],
-                pathB: []
+                maxTime,
+                people: times.map((time, i) => ({
+                    label: `Person ${String.fromCharCode(65 + i)}`,
+                    accentColor: PERSON_COLORS[i] ?? "#fff",
+                    stationName: "", // filled below
+                    travelTime: time,
+                    path: []
+                }))
             };
         }
 
@@ -109,8 +121,12 @@ export function findMeetingPoint(
 
     if(best){
 
-        best.pathA = reconstructPath(adjustedGraph, resultA, best.station.id)
-        best.pathB = reconstructPath(adjustedGraph, resultB, best.station.id)
+        // Attach station names and reconstruct paths
+        best.people = best.people.map((person, i) => ({
+            ...person,
+            stationName: graph.get(stationIds[i])?.station.name ?? stationIds[i],
+            path: reconstructPath(adjustedGraph, results[i], best!.station.id)
+        }))
 
     }
 
