@@ -4,6 +4,7 @@ import { useGraph } from "../lib/GraphContext"
 import { useTflStatus } from "../hooks/useTflStatus"
 import { findMeetingPoint } from "../lib/meetingPoint"
 import StationSearch from "../components/StationSearch"
+import TubeMap from "../components/TubeMap"
 import type { Station, MeetingPointResult, JourneyStep, PersonResult } from "../lib/types"
 
 // Tfl line brand colours - used for status pills
@@ -237,6 +238,7 @@ function ResultCard({
 }){
 
     const [showJourney, setShowJourney] = useState(false);
+    const [showMap, setShowMap] = useState(false);
     const fairnessDiff = result.maxTime - Math.min(...result.people.map((p) => p.travelTime))
 
     return (
@@ -326,6 +328,25 @@ function ResultCard({
                                 accentColor={person.accentColor}
                             />
                         ))}
+                    </div>
+                )}
+            </div>
+
+            {/* Map toggle */}
+            <div className="border-t border-gray-700">
+                <button
+                    onClick={() => setShowMap((v) => !v)}
+                    className="w-full px-6 py-3 text-sm text-gray-400 hover:text-white hover:bg-gray-800 transition-colors flex items-center justify-between"
+                >
+                    <span>Show route map</span>
+                    <span className="text-lg leading-none">
+                        {showMap ? "↑" : "↓"}
+                    </span>
+                </button>
+
+                {showMap && (
+                    <div className="px-4 pb-4 border-t border-gray-800 pt-4">
+                        <TubeMap result={result} />
                     </div>
                 )}
             </div>

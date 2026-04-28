@@ -11,6 +11,7 @@ import type { Graph, Station, Connection } from "./types";
 interface GraphContextValue{
     graph: Graph | null;
     stations: Station[];
+    connections: Connection[];
     loading: boolean;
     error: string | null;
 }
@@ -18,13 +19,15 @@ interface GraphContextValue{
 const GraphContext = createContext<GraphContextValue>({
     graph: null,
     stations: [],
+    connections: [],
     loading: true,
     error: null
 })
 
-export function GraphProvider({ children, }: {children: ReactNode }){
+export function GraphProvider({ children }: {children: ReactNode }){
     const [graph, setGraph] = useState<Graph | null>(null);
     const [stations, setStations] = useState<Station[]>([]);
+    const [connections, setConnections] = useState<Connection[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -42,6 +45,7 @@ export function GraphProvider({ children, }: {children: ReactNode }){
 
                 const built = buildGraph(stationsData, connectionsData);
                 setStations(stationsData);
+                setConnections(connectionsData);
                 setGraph(built);
 
             } catch (err){
@@ -62,7 +66,7 @@ export function GraphProvider({ children, }: {children: ReactNode }){
     }, [])
 
     return (
-        <GraphContext.Provider value={{ graph, stations, loading, error }}>
+        <GraphContext.Provider value={{ graph, stations, connections, loading, error }}>
             {children}
         </GraphContext.Provider>
     )

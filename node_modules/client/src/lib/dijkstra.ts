@@ -136,7 +136,7 @@ export function reconstructPath(
         const node = graph.get(current)
         if(!node) break;
 
-        const prev = previous.get(current) ?? null;
+        const prev : string | null = previous.get(current) ?? null;
         const line = lineUsed.get(current) ?? "";
 
         // Travel time for this step = distance[current] - distance[prev]
