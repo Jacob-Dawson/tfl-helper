@@ -1,5 +1,6 @@
 import type { Graph, DijkstraResult, MeetingPointResult, PersonResult } from "./types";
 import { dijkstra, reconstructPath } from "./dijkstra";
+import { PERSON_COLORS } from "./types";
 
 // Distruption weight multipliers by Tfl severity code.
 // Lower severity code = worse disruption in Tfl's scheme.
@@ -54,16 +55,6 @@ export function applyDisruptions(
     return adjusted;
 
 }
-
-// Colour palette for up to 6 people
-const PERSON_COLORS = [
-    "#60a5fa", // BLUE
-    "#a78bfa", // VIOLET
-    "#34d399", // EMERALD
-    "#f97316", // ORANGE
-    "#f43f5e", // ROSE
-    "#facc15"  // YELLOW
-]
 
 // Find the optimal meeting point between two stations,
 

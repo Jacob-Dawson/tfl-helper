@@ -57,3 +57,12 @@ export interface MeetingPointResult {
     maxTime: number;        // the fairness metric - lowest max across all candidates
     people: PersonResult[];
 }
+
+export const PERSON_COLORS = [
+  "#60a5fa",
+  "#a78bfa",
+  "#34d399",
+  "#f97316",
+  "#f43f5e",
+  "#facc15",
+] as const;

@@ -31,24 +31,6 @@ const LINE_COLOURS: Record<string, string> = {
     interchange: "#9ca3af",
 };
 
-function makeCircleMarker(color: string, size: number = 10): L.DivIcon{
-
-    return L.divIcon({
-        className: "",
-        html: `<div style="
-            width: ${size}px;
-            height: ${size}px;
-            background: ${color};
-            border: 2px solid #111827;
-            border-radius: 50%;
-            box-shadow: 0 0 6px ${color}88;
-        "></div>`,
-        iconSize: [size, size],
-        iconAnchor: [size / 2, size / 2]
-    })
-
-}
-
 function makeLabel(name: string, color: string, isMeeting: boolean): L.DivIcon {
  
     return L.divIcon({
@@ -157,9 +139,6 @@ export default function TubeMap({ result }: Props){
                 allLatLngs.push(from, to)
 
                 const isInterchange = toStep.line === "interchange"
-                const lineColour = isInterchange
-                    ? person.accentColor
-                    : (LINE_COLOURS[toStep.line] ?? person.accentColor)
 
                 L.polyline([from, to], {
                     color: person.accentColor,
@@ -251,8 +230,9 @@ export default function TubeMap({ result }: Props){
 
         return () => {
 
-            map.remove();
             mapRef.current = null
+            map.remove();
+            
 
         }
 

@@ -42,7 +42,7 @@ export function useTflStatus(): {
                 setLoading(true);
                 setError(null);
 
-                const apiKey = import.meta.env.TFL_API_KEY ?? "";
+                const apiKey = import.meta.env.VITE_TFL_API_KEY ?? "";
                 const url = `/tfl/Line/Mode/${MODES}/Status${
                     apiKey ? `?app_key=${apiKey}` : ""
                 }`;

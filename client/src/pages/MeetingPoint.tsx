@@ -5,7 +5,8 @@ import { useTflStatus } from "../hooks/useTflStatus"
 import { findMeetingPoint } from "../lib/meetingPoint"
 import StationSearch from "../components/StationSearch"
 import TubeMap from "../components/TubeMap"
-import type { Station, MeetingPointResult, JourneyStep, PersonResult } from "../lib/types"
+import { PERSON_COLORS } from "../lib/types"
+import type { Station, MeetingPointResult, JourneyStep } from "../lib/types"
 
 // Tfl line brand colours - used for status pills
 const LINE_COLOURS: Record<string, string> = {
@@ -44,7 +45,7 @@ const LINE_NAMES: Record<string, string> = {
     piccadilly: "Piccadilly",
     victoria: "Victoria",
     "waterloo-city": "Waterloo & City",
-    "elizabeth-line": "Elizabeth line",
+    "elizabeth-line": "Elizabeth",
     lioness: "Lioness",
     mildmay: "Mildmay",
     windrush: "Windrush",
@@ -57,14 +58,6 @@ const LINE_NAMES: Record<string, string> = {
 const MAX_PEOPLE = 6;
 const MIN_PEOPLE = 2;
 
-const PERSON_COLORS = [
-  "#60a5fa",
-  "#a78bfa",
-  "#34d399",
-  "#f97316",
-  "#f43f5e",
-  "#facc15"
-];
 
 function SeverityBadge({ description, severity }: {description: string; severity: number}){
 
@@ -164,14 +157,16 @@ function JourneyBreakdown({
                                     backgroundColor: LINE_COLOURS[seg.line] ?? "#666"
                                 }}
                             />
-                            {i < segments.length - 1 && (
-                                <div
-                                    className="w-0.5 flex-1 min-h-4"
-                                    style={{
-                                        backgroundColor: LINE_COLOURS[seg.line] ?? "#666"
-                                    }}
-                                />
-                            )}
+                            <div
+                                className="w-0.5 flex-1 min-h-4"
+                                style={{
+                                    backgroundColor: LINE_COLOURS[seg.line] ?? "#666"
+                                }}
+                            />
+                            <div
+                                className="w-3 h-3 rounded-full shrink-0"
+                                style={{backgroundColor: LINE_COLOURS[seg.line] ?? "#666"}}
+                            />
                         </div>
 
                         {/* Segment content */}
@@ -248,7 +243,7 @@ function ResultCard({
                 <p className="text-xs text-blue-400 uppercase tracking-widest font-medium mb-1">
                     Optimal Meeting Point
                 </p>
-                <h2 className="text-2xl font-boold text-white">{result.station.name}</h2>
+                <h2 className="text-2xl font-bold text-white">{result.station.name}</h2>
                 <p className="text-sm text-gray-400 mt-1">Zone {result.station.zone}</p>
             </div>
 
@@ -640,7 +635,7 @@ export default function MeetingPoint(){
                                     }}
                                 />
                                 <span className="text-sm text-gray-300">
-                                    {line.name}
+                                    {LINE_NAMES[line.id] ?? line.name}
                                 </span>
                                 </div>
                                 <div className="flex items-center gap-2">
