@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build --workspace=client"
+  command = "cd client && npm install && npx vite build"
   publish = "client/dist"
 
 [build.environment]
