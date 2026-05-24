@@ -1,5 +1,5 @@
 [build]
-  command = "cd client && npm install && npm run build"
+  command = "cd client && npm install && node ../node_modules/vite/bin/vite.js build"
   publish = "client/dist"
 
 [build.environment]
